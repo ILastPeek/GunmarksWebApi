@@ -1,6 +1,6 @@
 # GunmarksWebApi
 
-**Web API for retrieving gun mark scores on tanks from the game World of Tanks.**
+**The web API for viewing the value for getting a mark on a gun in the World of Tanks game.**
 
 Clients can filter, sort, and search tanks by nation, class, tier, status, and name. The API returns data in JSON format, making it suitable for mobile apps, SPAs, Telegram bots, or other services.
 
