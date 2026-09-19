@@ -1,6 +1,0 @@
-@Burn_HostAddress = http://localhost:5187
-
-GET {{Burn_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

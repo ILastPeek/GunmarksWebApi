@@ -1,0 +1,6 @@
+@GunmarksWebApi_HostAddress = http://localhost:5187
+
+GET {{GunmarksWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
