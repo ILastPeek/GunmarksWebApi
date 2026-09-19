@@ -1,0 +1,412 @@
+[
+    {
+        "name": "Mausekönig",
+        "level": 11,
+        "mark1": 6669,
+        "mark2": 8104,
+        "mark3": 9172,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Проект Васильева",
+        "level": 10,
+        "mark1": 4653,
+        "mark2": 6279,
+        "mark3": 7883,
+        "nationCss": "ussr",
+        "typeCss": "lightTank",
+        "status": "Special"
+    },
+    {
+        "name": "Ирбис",
+        "level": 10,
+        "mark1": 3938,
+        "mark2": 5185,
+        "mark3": 6075,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "ARL Projet F",
+        "level": 11,
+        "mark1": 3580,
+        "mark2": 4860,
+        "mark3": 5843,
+        "nationCss": "france",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Champion",
+        "level": 11,
+        "mark1": 3541,
+        "mark2": 4793,
+        "mark3": 5755,
+        "nationCss": "uk",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "T95E6",
+        "level": 10,
+        "mark1": 3590,
+        "mark2": 4754,
+        "mark3": 5682,
+        "nationCss": "usa",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "T95/FV4201 Chieftain",
+        "level": 10,
+        "mark1": 3587,
+        "mark2": 4768,
+        "mark3": 5644,
+        "nationCss": "uk",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "116-F3",
+        "level": 10,
+        "mark1": 3486,
+        "mark2": 4663,
+        "mark3": 5548,
+        "nationCss": "china",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "MBT-B",
+        "level": 11,
+        "mark1": 3328,
+        "mark2": 4545,
+        "mark3": 5478,
+        "nationCss": "usa",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "VK 72.01 (K)",
+        "level": 10,
+        "mark1": 3414,
+        "mark2": 4550,
+        "mark3": 5445,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "CS-63 Wilk",
+        "level": 10,
+        "mark1": 3342,
+        "mark2": 4503,
+        "mark3": 5368,
+        "nationCss": "poland",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Projet Murat",
+        "level": 10,
+        "mark1": 3457,
+        "mark2": 4526,
+        "mark3": 5354,
+        "nationCss": "france",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Объект 279",
+        "level": 11,
+        "mark1": 3228,
+        "mark2": 4413,
+        "mark3": 5327,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Gothic Warrior",
+        "level": 10,
+        "mark1": 3394,
+        "mark2": 4494,
+        "mark3": 5316,
+        "nationCss": "czech",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Carro da Combattimento 45 t",
+        "level": 10,
+        "mark1": 3324,
+        "mark2": 4438,
+        "mark3": 5270,
+        "nationCss": "italy",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Объект 168-122 Квант",
+        "level": 10,
+        "mark1": 3297,
+        "mark2": 4389,
+        "mark3": 5231,
+        "nationCss": "ussr",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Vandal",
+        "level": 10,
+        "mark1": 3195,
+        "mark2": 4306,
+        "mark3": 5162,
+        "nationCss": "uk",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Объект 279 ранний",
+        "level": 10,
+        "mark1": 3234,
+        "mark2": 4316,
+        "mark3": 5152,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Объект 278",
+        "level": 10,
+        "mark1": 3154,
+        "mark2": 4278,
+        "mark3": 5130,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "DZT-159",
+        "level": 10,
+        "mark1": 3158,
+        "mark2": 4283,
+        "mark3": 5123,
+        "nationCss": "china",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Eisbär",
+        "level": 11,
+        "mark1": 2950,
+        "mark2": 4121,
+        "mark3": 5042,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "FV215b",
+        "level": 10,
+        "mark1": 2938,
+        "mark2": 4116,
+        "mark3": 5037,
+        "nationCss": "uk",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Type 71",
+        "level": 10,
+        "mark1": 3026,
+        "mark2": 4152,
+        "mark3": 5021,
+        "nationCss": "japan",
+        "typeCss": "heavyTank",
+        "status": "Standard"
+    },
+    {
+        "name": "BZT-70",
+        "level": 11,
+        "mark1": 2965,
+        "mark2": 4120,
+        "mark3": 5012,
+        "nationCss": "china",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Czołg Pancernik wz.46",
+        "level": 10,
+        "mark1": 3019,
+        "mark2": 4070,
+        "mark3": 4950,
+        "nationCss": "poland",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Е 100 Feuerbär",
+        "level": 10,
+        "mark1": 2921,
+        "mark2": 4009,
+        "mark3": 4851,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Объект 907",
+        "level": 10,
+        "mark1": 2885,
+        "mark2": 3948,
+        "mark3": 4806,
+        "nationCss": "ussr",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "Orso",
+        "level": 10,
+        "mark1": 2849,
+        "mark2": 3938,
+        "mark3": 4785,
+        "nationCss": "italy",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "ИС-7 «Драгун»",
+        "level": 10,
+        "mark1": 2796,
+        "mark2": 3916,
+        "mark3": 4755,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Manticore",
+        "level": 10,
+        "mark1": 2457,
+        "mark2": 3698,
+        "mark3": 4745,
+        "nationCss": "uk",
+        "typeCss": "lightTank",
+        "status": "Standard"
+    },
+    {
+        "name": "Объект 260",
+        "level": 10,
+        "mark1": 2832,
+        "mark2": 3907,
+        "mark3": 4734,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "H-3",
+        "level": 10,
+        "mark1": 2795,
+        "mark2": 3874,
+        "mark3": 4723,
+        "nationCss": "usa",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Projet 57",
+        "level": 10,
+        "mark1": 2922,
+        "mark2": 3951,
+        "mark3": 4702,
+        "nationCss": "france",
+        "typeCss": "heavyTank",
+        "status": "Special"
+    },
+    {
+        "name": "Type 5 Heavy",
+        "level": 10,
+        "mark1": 2835,
+        "mark2": 3886,
+        "mark3": 4701,
+        "nationCss": "japan",
+        "typeCss": "heavyTank",
+        "status": "Standard"
+    },
+    {
+        "name": "OTAC MT-58",
+        "level": 10,
+        "mark1": 2765,
+        "mark2": 3846,
+        "mark3": 4684,
+        "nationCss": "usa",
+        "typeCss": "mediumTank",
+        "status": "Special"
+    },
+    {
+        "name": "ИС-7",
+        "level": 10,
+        "mark1": 2389,
+        "mark2": 3395,
+        "mark3": 4196,
+        "nationCss": "ussr",
+        "typeCss": "heavyTank",
+        "status": "Standard"
+    },
+    {
+        "name": "Leopard 1",
+        "level": 10,
+        "mark1": 2544,
+        "mark2": 3531,
+        "mark3": 4296,
+        "nationCss": "germany",
+        "typeCss": "mediumTank",
+        "status": "Standard"
+    },
+    {
+        "name": "E 100",
+        "level": 10,
+        "mark1": 2112,
+        "mark2": 3025,
+        "mark3": 3756,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Standard"
+    },
+    {
+        "name": "Maus",
+        "level": 10,
+        "mark1": 2087,
+        "mark2": 3003,
+        "mark3": 3730,
+        "nationCss": "germany",
+        "typeCss": "heavyTank",
+        "status": "Standard"
+    },
+    {
+        "name": "Т-100 ЛТ",
+        "level": 10,
+        "mark1": 2066,
+        "mark2": 3182,
+        "mark3": 4158,
+        "nationCss": "ussr",
+        "typeCss": "lightTank",
+        "status": "Standard"
+    },
+    {
+        "name": "Panhard EBR 105",
+        "level": 10,
+        "mark1": 1940,
+        "mark2": 3133,
+        "mark3": 4161,
+        "nationCss": "france",
+        "typeCss": "lightTank",
+        "status": "Standard"
+    }
+]
