@@ -2,25 +2,31 @@ using Microsoft.EntityFrameworkCore;
 using GunmarksWebApi.Data;
 using GunmarksWebApi.Repositories.Abstract;
 using GunmarksWebApi.Repositories.EntityFramework;
+using GunmarksWebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ============================================================
-// 1. Настройка БД
+// Настройка БД
 // ============================================================
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
 // ============================================================
-// 2. Репозитории
+// Репозитории
 // ============================================================
 builder.Services.AddScoped<ITankRepository, EFTankRepository>();
 builder.Services.AddScoped<INationRepository, EFNationRepository>();
 builder.Services.AddScoped<ITankTypeRepository, EFTankTypeRepository>();
 
 // ============================================================
-// 3. Контроллеры + Swagger
+// РЕГИСТРАЦИЯ СЕРВИСОВ
+// ============================================================
+builder.Services.AddScoped<ITankService, TankService>();
+
+// ============================================================
+// Контроллеры + Swagger
 // ============================================================
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -29,7 +35,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // ============================================================
-// 4. Инициализация БД
+// Инициализация БД
 // ============================================================
 using (var scope = app.Services.CreateScope())
 {
@@ -47,7 +53,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 // ============================================================
-// 5. Middleware
+// Middleware
 // ============================================================
 if (app.Environment.IsDevelopment())
 {
