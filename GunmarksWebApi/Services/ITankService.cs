@@ -4,10 +4,17 @@ namespace GunmarksWebApi.Services
 {
     public interface ITankService
     {
-        // Получить список танков с фильтрацией, сортировкой и пагинацией
+        // Read
         Task<PaginatedResultDto<TankDto>> GetTanksAsync(TankFilterDto filter);
-
-        // Получить один танк по Id
         Task<TankDto?> GetByIdAsync(int id);
+
+        // Create
+        Task<TankDto> CreateAsync(CreateTankDto dto);
+
+        // Update
+        Task<TankDto?> UpdateAsync(int id, UpdateTankDto dto);
+
+        // Delete
+        Task<bool> DeleteAsync(int id);
     }
 }

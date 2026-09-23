@@ -160,5 +160,82 @@ namespace GunmarksWebApi.Services
                 Status = tank.Status.ToString()
             };
         }
+
+        // ============================================================
+        // СОЗДАТЬ НОВЫЙ ТАНК
+        // ============================================================
+        public async Task<TankDto> CreateAsync(CreateTankDto dto)
+        {
+            // Проверяем, что нация и тип существуют
+            // (чтобы не получить ошибку внешнего ключа при сохранении)
+            // Для этого нам нужны репозитории — но их сейчас нет в TankService.
+            // Пока пропустим эту проверку — но в реальном проекте её надо делать.
+
+            var tank = new Tank
+            {
+                Name = dto.Name,
+                Level = dto.Level,
+                Mark1 = dto.Mark1,
+                Mark2 = dto.Mark2,
+                Mark3 = dto.Mark3,
+                Status = (TankStatus)dto.Status,
+                NationId = dto.NationId,
+                TankTypeId = dto.TankTypeId
+            };
+
+            await _tankRepository.AddAsync(tank);
+            await _tankRepository.SaveChangesAsync();
+
+            // Перечитываем танк, чтобы подгрузить навигационные свойства Nation и TankType
+            var created = await _tankRepository.GetByIdAsync(tank.Id);
+
+            return MapToDto(created!);
+        }
+
+        // ============================================================
+        // ОБНОВИТЬ ТАНК
+        // ============================================================
+        public async Task<TankDto?> UpdateAsync(int id, UpdateTankDto dto)
+        {
+            // Ищем танк по Id
+            var tank = await _tankRepository.GetByIdAsync(id);
+
+            // Если не найден — возвращаем null (контроллер вернёт 404)
+            if (tank == null)
+                return null;
+
+            // Обновляем поля
+            tank.Name = dto.Name;
+            tank.Level = dto.Level;
+            tank.Mark1 = dto.Mark1;
+            tank.Mark2 = dto.Mark2;
+            tank.Mark3 = dto.Mark3;
+            tank.Status = (TankStatus)dto.Status;
+            tank.NationId = dto.NationId;
+            tank.TankTypeId = dto.TankTypeId;
+
+            _tankRepository.Update(tank);
+            await _tankRepository.SaveChangesAsync();
+
+            // Перечитываем, чтобы обновлённые связи (Nation/TankType) были актуальны
+            var updated = await _tankRepository.GetByIdAsync(tank.Id);
+            return MapToDto(updated!);
+        }
+
+        // ============================================================
+        // УДАЛИТЬ ТАНК
+        // ============================================================
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var tank = await _tankRepository.GetByIdAsync(id);
+
+            // Если не найден — false
+            if (tank == null)
+                return false;
+
+            _tankRepository.Delete(tank);
+            await _tankRepository.SaveChangesAsync();
+            return true;
+        }
     }
 }

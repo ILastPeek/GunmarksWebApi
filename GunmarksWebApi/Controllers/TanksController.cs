@@ -65,5 +65,59 @@ namespace GunmarksWebApi.Controllers
             // Иначе — 200 OK с танком
             return Ok(tank);
         }
+
+        // ============================================================
+        // POST /api/tanks
+        // Создать новый танк
+        // ============================================================
+        // [FromBody] — параметр читается из тела запроса (JSON).
+        // [ApiController] сам десериализует JSON в CreateTankDto.
+        // ============================================================
+        [HttpPost]
+        public async Task<ActionResult<TankDto>> CreateTank([FromBody] CreateTankDto dto)
+        {
+            var created = await _tankService.CreateAsync(dto);
+
+            // CreatedAtAction возвращает 201 Created и заголовок Location
+            // с URL нового ресурса: /api/tanks/{id}
+            return CreatedAtAction(
+                nameof(GetTankById),   // имя метода для генерации URL
+                new { id = created.Id }, // параметры для URL
+                created);              // тело ответа
+        }
+
+        // ============================================================
+        // PUT /api/tanks/{id}
+        // Обновить существующий танк
+        // ============================================================
+        [HttpPut("{id}")]
+        public async Task<ActionResult<TankDto>> UpdateTank(int id, [FromBody] UpdateTankDto dto)
+        {
+            var updated = await _tankService.UpdateAsync(id, dto);
+
+            // Если танк не найден — 404
+            if (updated == null)
+                return NotFound();
+
+            // Иначе — 200 OK с обновлённым танком
+            return Ok(updated);
+        }
+
+        // ============================================================
+        // DELETE /api/tanks/{id}
+        // Удалить танк
+        // ============================================================
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTank(int id)
+        {
+            var success = await _tankService.DeleteAsync(id);
+
+            // Если не найден — 404
+            if (!success)
+                return NotFound();
+
+            // Иначе — 204 No Content (удалено, тело не нужно)
+            return NoContent();
+        }
     }
 }
