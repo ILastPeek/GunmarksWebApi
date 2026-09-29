@@ -2,6 +2,7 @@
 using GunmarksWebApi.Domain.Entities;
 using GunmarksWebApi.DTOs;
 using GunmarksWebApi.Repositories.Abstract;
+using GunmarksWebApi.Domain.Enums;
 
 namespace GunmarksWebApi.Services
 {
