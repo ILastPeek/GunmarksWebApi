@@ -14,14 +14,14 @@ namespace GunmarksWebApi.Repositories.EntityFramework
             _context = context;
         }
 
-        public async Task<IEnumerable<TankType>> GetAllAsync()
+        public async Task<IEnumerable<TankType?>> GetAllAsync()
         {
             return await _context.TankTypes
                 .OrderBy(t => t.Name)
                 .ToListAsync();
         }
 
-        public async Task<TankType> GetByIdAsync(int id)
+        public async Task<TankType?> GetByIdAsync(int id)
         {
             return await _context.TankTypes.FirstOrDefaultAsync(t => t.Id == id);
         }

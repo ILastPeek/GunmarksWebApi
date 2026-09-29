@@ -7,7 +7,7 @@ namespace GunmarksWebApi.Domain.Entities
     public class Tank
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public int Level { get; set; }
 
         public int Mark1 { get; set; }   // 65%
@@ -21,8 +21,8 @@ namespace GunmarksWebApi.Domain.Entities
         public int TankTypeId { get; set; }
 
         // Навигационные свойства (связи)
-        public Nation Nation { get; set; }
-        public TankType TankType { get; set; }
+        public Nation? Nation { get; set; }
+        public TankType? TankType { get; set; }
 
         [NotMapped]
         public string LevelRoman => RomanNumerals.ToRoman(Level);

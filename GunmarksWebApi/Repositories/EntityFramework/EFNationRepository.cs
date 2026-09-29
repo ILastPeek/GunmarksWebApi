@@ -21,7 +21,7 @@ namespace GunmarksWebApi.Repositories.EntityFramework
                 .ToListAsync();
         }
 
-        public async Task<Nation> GetByIdAsync(int id)
+        public async Task<Nation?> GetByIdAsync(int id)
         {
             return await _context.Nations.FirstOrDefaultAsync(n => n.Id == id);
         }

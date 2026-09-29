@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using GunmarksWebApi.Domain.Entities;
-using GunmarksWebApi.Domain.Enums;
 using GunmarksWebApi.DTOs;
 using GunmarksWebApi.Repositories.Abstract;
 
@@ -71,11 +70,11 @@ namespace GunmarksWebApi.Services
                 "level" => query.OrderBy(t => t.Level).ThenByDescending(t => t.Mark3),
                 "level_desc" => query.OrderByDescending(t => t.Level).ThenByDescending(t => t.Mark3),
 
-                "nation" => query.OrderBy(t => t.Nation.Name).ThenBy(t => t.Name),
-                "nation_desc" => query.OrderByDescending(t => t.Nation.Name).ThenBy(t => t.Name),
+                "nation" => query.OrderBy(t => t.Nation!.Name).ThenBy(t => t.Name),
+                "nation_desc" => query.OrderByDescending(t => t.Nation!.Name).ThenBy(t => t.Name),
 
-                "tankType" => query.OrderBy(t => t.TankType.ShortName).ThenBy(t => t.Name),
-                "tankType_desc" => query.OrderByDescending(t => t.TankType.ShortName).ThenBy(t => t.Name),
+                "tankType" => query.OrderBy(t => t.TankType!.ShortName).ThenBy(t => t.Name),
+                "tankType_desc" => query.OrderByDescending(t => t.TankType!.ShortName).ThenBy(t => t.Name),
 
                 "mark1" => query.OrderBy(t => t.Mark1).ThenBy(t => t.Name),
                 "mark1_desc" => query.OrderByDescending(t => t.Mark1).ThenBy(t => t.Name),

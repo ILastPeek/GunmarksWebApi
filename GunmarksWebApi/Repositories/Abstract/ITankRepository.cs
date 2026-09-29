@@ -9,7 +9,7 @@ namespace GunmarksWebApi.Repositories.Abstract
         IQueryable<Tank> GetAll();
 
         // Найти танк по Id (вместе с нацией и типом)
-        Task<Tank> GetByIdAsync(int id);
+        Task<Tank?> GetByIdAsync(int id);
 
         // Добавить новый танк
         Task AddAsync(Tank entity);

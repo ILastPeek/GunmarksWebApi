@@ -5,6 +5,6 @@ namespace GunmarksWebApi.Repositories.Abstract
     public interface INationRepository
     {
         Task<IEnumerable<Nation>> GetAllAsync();
-        Task<Nation> GetByIdAsync(int id);
+        Task<Nation?> GetByIdAsync(int id);
     }
 }

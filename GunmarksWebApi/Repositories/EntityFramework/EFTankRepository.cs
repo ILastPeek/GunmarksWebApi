@@ -24,7 +24,7 @@ namespace GunmarksWebApi.Repositories.EntityFramework
                 .Include(t => t.TankType);
         }
 
-        public async Task<Tank> GetByIdAsync(int id)
+        public async Task<Tank?> GetByIdAsync(int id)
         {
             return await _context.Tanks
                 .Include(t => t.Nation)

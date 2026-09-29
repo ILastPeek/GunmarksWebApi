@@ -6,7 +6,7 @@
     public class PaginatedResultDto<T>
     {
         // Список элементов на текущей странице
-        public IEnumerable<T> Items { get; set; }
+        public IEnumerable<T> Items { get; set; } = Enumerable.Empty<T>();
 
         // Общее количество записей (без учёта пагинации)
         public int TotalItems { get; set; }
