@@ -1,5 +1,4 @@
-﻿using GunmarksWebApi.Domain.Entities;
-using GunmarksWebApi.DTOs;
+﻿using GunmarksWebApi.DTOs;
 
 namespace GunmarksWebApi.Services
 {
