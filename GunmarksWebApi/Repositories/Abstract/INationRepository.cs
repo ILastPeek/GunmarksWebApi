@@ -4,7 +4,7 @@ namespace GunmarksWebApi.Repositories.Abstract
 {
     public interface INationRepository
     {
-        Task<IEnumerable<Nation>> GetAllAsync();
+        IQueryable<Nation> GetAll();
         Task<Nation?> GetByIdAsync(int id);
     }
 }

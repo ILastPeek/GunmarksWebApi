@@ -14,11 +14,9 @@ namespace GunmarksWebApi.Repositories.EntityFramework
             _context = context;
         }
 
-        public async Task<IEnumerable<Nation>> GetAllAsync()
+        public  IQueryable<Nation> GetAll()
         {
-            return await _context.Nations
-                .OrderBy(n => n.Name) // сортировка по алфавиту
-                .ToListAsync();
+            return _context.Nations;
         }
 
         public async Task<Nation?> GetByIdAsync(int id)

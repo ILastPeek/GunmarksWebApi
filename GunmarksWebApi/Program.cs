@@ -24,6 +24,7 @@ builder.Services.AddScoped<ITankTypeRepository, EFTankTypeRepository>();
 // РЕГИСТРАЦИЯ СЕРВИСОВ
 // ============================================================
 builder.Services.AddScoped<ITankService, TankService>();
+builder.Services.AddScoped<INationService, NationService>();
 
 // ============================================================
 // Контроллеры + Swagger

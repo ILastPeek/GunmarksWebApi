@@ -9,16 +9,11 @@ namespace GunmarksWebApi.Controllers
     // - автоматическая привязка параметров из query/route/body
     // - если модель невалидна — вернётся 400 Bad Request
     [ApiController]
-
-    // [Route] задаёт базовый URL.
-    // "[controller]" — это подстановка имени класса без суффикса "Controller".
-    // TanksController → /api/tanks
     [Route("api/[controller]")]
     public class TanksController : ControllerBase
     {
         private readonly ITankService _tankService;
 
-        // DI-контейнер передаст ITankService в конструктор
         public TanksController(ITankService tankService)
         {
             _tankService = tankService;
@@ -31,7 +26,7 @@ namespace GunmarksWebApi.Controllers
         // Пример запроса:
         //   GET /api/tanks?level=10&sortOrder=mark3_desc&pageNumber=1&pageSize=20
         //
-        // [FromQuery] означает: параметр читается из query-строки.
+        // [FromQuery]: параметр читается из query-строки.
         // ASP.NET Core сам сопоставит имена в URL с именами свойств TankFilterDto.
         // ============================================================
         [HttpGet]
@@ -39,7 +34,6 @@ namespace GunmarksWebApi.Controllers
         {
             var result = await _tankService.GetTanksAsync(filter);
 
-            // Ok() возвращает 200 OK с JSON в теле
             return Ok(result);
         }
 
@@ -49,20 +43,15 @@ namespace GunmarksWebApi.Controllers
         // ============================================================
         // Пример запроса:
         //   GET /api/tanks/5
-        //
-        // {id} в маршруте — это часть URL.
-        // ASP.NET Core подставит значение из URL в параметр метода.
         // ============================================================
         [HttpGet("{id}")]
         public async Task<ActionResult<TankDto>> GetTankById(int id)
         {
             var tank = await _tankService.GetByIdAsync(id);
 
-            // Если танк не найден — возвращаем 404 Not Found
             if (tank == null)
                 return NotFound();
 
-            // Иначе — 200 OK с танком
             return Ok(tank);
         }
 
@@ -95,11 +84,9 @@ namespace GunmarksWebApi.Controllers
         {
             var updated = await _tankService.UpdateAsync(id, dto);
 
-            // Если танк не найден — 404
             if (updated == null)
                 return NotFound();
 
-            // Иначе — 200 OK с обновлённым танком
             return Ok(updated);
         }
 
@@ -112,7 +99,6 @@ namespace GunmarksWebApi.Controllers
         {
             var success = await _tankService.DeleteAsync(id);
 
-            // Если не найден — 404
             if (!success)
                 return NotFound();
 
